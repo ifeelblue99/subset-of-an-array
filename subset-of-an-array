@@ -1,0 +1,17 @@
+const nums = [1,2,3,4]
+
+function subsets(n){
+  
+  let array = []
+  let currentİtem = 0
+  n.forEach((el, index)=>{
+    currentİtem = el
+    for (var i = index+1; i < n.length; i++) {
+      array.push([el, n[i]])
+    }
+  })
+  
+  return array
+}
+
+console.log(subsets(nums))
